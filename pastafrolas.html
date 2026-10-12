@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Pastafrolas Tradicionales | Quatro Pastelería Artesanal</title>
+  <meta name="description"
+    content="Pastafrolas caseras Quatro: masa sablée quebradiza, enrejado dorado artesanal y generoso relleno de membrillo al oporto, batata con chocolate o mitad & mitad. Horneadas diariamente por 4 amigos pasteleros." />
+  <link rel="icon" type="image/jpeg" href="logo.png" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main> :first-child {
+        margin-top: 0 !important;
+      }
+
+      main> :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Smooth page fade transition */
+    body {
+      opacity: 0;
+      transition: opacity 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    body.page-loaded {
+      opacity: 1;
+    }
+
+    body.page-leaving {
+      opacity: 0;
+      transition: opacity 0.25s cubic-bezier(0.4, 0, 1, 1);
+    }
+
+    /* Elastic nav active indicator */
+    #navElasticPill {
+      position: absolute;
+      background-color: #1B2D48;
+      border-radius: 9999px;
+      pointer-events: none;
+      z-index: 0;
+      box-shadow: 0 2px 8px rgba(27, 45, 72, 0.25);
+      transition: left 0.28s cubic-bezier(0.25, 1, 0.5, 1),
+        top 0.28s cubic-bezier(0.25, 1, 0.5, 1),
+        width 0.28s cubic-bezier(0.25, 1, 0.5, 1),
+        height 0.28s cubic-bezier(0.25, 1, 0.5, 1),
+        opacity 0.2s ease;
+    }
+
+    #desktopNav a[data-nav-item],
+    #desktopNav [data-nav-item] > button {
+      transition: color 0.18s ease;
+    }
+
+    #desktopNav a[data-nav-item]:hover,
+    #desktopNav [data-nav-item]:hover > button {
+      color: #ffffff !important;
+    }
+
+    .material-symbols-outlined {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      max-width: 18px;
+      max-height: 18px;
+      overflow: hidden;
+      vertical-align: middle;
+      line-height: 1;
+      font-size: 18px;
+    }
+
+    .dropdown-glass {
+      background: rgba(255, 255, 255, 0.70) !important;
+      -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+      backdrop-filter: blur(20px) saturate(180%) !important;
+      border: 1px solid rgba(255, 255, 255, 0.75) !important;
+      box-shadow: 0 16px 36px rgba(4, 24, 50, 0.12), 0 2px 6px rgba(4, 24, 50, 0.04) !important;
+    }
+  </style>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-bright": "#f8faf6",
+            "on-background": "#191c1a",
+            "secondary-fixed-dim": "#e3c199",
+            "sage-soft": "#B7C4B2",
+            "inverse-surface": "#2e312f",
+            "secondary-container": "#F5EAD9",
+            "error-container": "#ffdad6",
+            "sage-pale": "#DCE3D9",
+            "sage-tint": "#EDF2EB",
+            "sage-light": "#E2EAE0",
+            "secondary-fixed": "#ffddb6",
+            "on-tertiary-container": "#c4d6f9",
+            "tertiary-fixed-dim": "#b5c7e9",
+            "on-error": "#ffffff",
+            "sage-deep": "#4A6349",
+            "surface-container-low": "#f2f4f0",
+            "background": "#f8faf6",
+            "navy-deep": "#041832",
+            "navy-ink": "#1B2D48",
+            "tertiary": "#344662",
+            "crema-canvas": "#FBF9F5",
+            "primary-fixed-dim": "#b2ceae",
+            "on-surface": "#191c1a",
+            "on-secondary-container": "#785e3d",
+            "secondary": "#8B6543",
+            "surface-container-high": "#e7e9e5",
+            "on-tertiary-fixed-variant": "#364764",
+            "on-primary-container": "#c1debd",
+            "on-primary-fixed-variant": "#344d34",
+            "surface-container": "#eceeea",
+            "toasted-wheat": "#C8A882",
+            "warm-cinnamon": "#8B6543",
+            "dulce-de-leche": "#D8BA96",
+            "caramel-soft": "#EEDDC9",
+            "sage-mid": "#8A9E8A",
+            "tertiary-fixed": "#d5e3ff",
+            "primary-container": "#1B2D48",
+            "on-surface-variant": "#434841",
+            "surface-container-highest": "#e1e3df",
+            "on-tertiary": "#ffffff",
+            "on-secondary": "#ffffff",
+            "surface-tint": "#4c654b",
+            "error": "#ba1a1a",
+            "surface-container-lowest": "#ffffff",
+            "primary": "#041832",
+            "on-secondary-fixed-variant": "#5a4224",
+            "on-tertiary-fixed": "#071c36",
+            "on-primary": "#ffffff",
+            "on-error-container": "#93000a",
+            "inverse-primary": "#b2ceae",
+            "outline-variant": "#c3c8bf",
+            "tertiary-container": "#4c5d7b",
+            "surface-variant": "#e1e3df",
+            "on-primary-fixed": "#09200c",
+            "outline": "#737971",
+            "surface": "#f8faf6",
+            "on-secondary-fixed": "#291801",
+            "surface-dim": "#d8dbd7",
+            "primary-fixed": "#ceeac9"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "1rem",
+            "margin-mobile": "1.25rem",
+            "margin": "3rem",
+            "space-xl": "2.5rem",
+            "space-lg": "1.5rem",
+            "gutter": "1.5rem",
+            "gutter-mobile": "1rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "body-md": ["Manrope", "sans-serif"],
+            "body-lg": ["Manrope", "sans-serif"],
+            "title-md": ["Manrope", "sans-serif"],
+            "headline-lg": ["EB Garamond", "serif"],
+            "display-lg-mobile": ["EB Garamond", "serif"],
+            "body-sm": ["Manrope", "sans-serif"],
+            "label-sm": ["Manrope", "sans-serif"],
+            "headline-md": ["EB Garamond", "serif"],
+            "headline-sm": ["EB Garamond", "serif"],
+            "display-lg": ["EB Garamond", "serif"],
+            "label-lg": ["Manrope", "sans-serif"],
+            "title-lg": ["Manrope", "sans-serif"],
+            "headline-lg-mobile": ["EB Garamond", "serif"]
+          },
+          "fontSize": {
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "body-lg": ["17px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "display-lg-mobile": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "700" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "500" }],
+            "headline-sm": ["22px", { "lineHeight": "30px", "fontWeight": "600" }],
+            "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "title-lg": ["19px", { "lineHeight": "26px", "fontWeight": "700" }],
+            "headline-lg-mobile": ["30px", { "lineHeight": "38px", "fontWeight": "500" }]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-toasted-wheat selection:text-navy-ink">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full z-50">
+    <div
+      class="w-full bg-[#EDF2EB] text-[#4A6349] border-b border-[#DCE3D9] text-center py-space-xs px-gutter-mobile md:px-gutter font-label-sm text-label-sm tracking-wide">
+      <p class="flex items-center justify-center gap-space-xs">
+        <span class="material-symbols-outlined text-[16px] text-[#4A6349]">local_fire_department</span>
+        <span>4 amigos horneando con amor y pasión pastelera • Envíos artesanales frescos todos los días</span>
+      </p>
+    </div>
+
+    <div
+      class="w-full bg-surface/95 border-b border-sage-pale/60 shadow-[0_2px_12px_rgba(27,45,72,0.04)]">
+      <div
+        class="h-20 max-w-[1200px] mx-auto px-margin-mobile md:px-margin flex items-center justify-between gap-space-md">
+        <div class="flex items-center gap-space-md">
+          <img alt="Logo Quatro Pastelería" class="h-9 w-9 object-contain rounded-lg shadow-xs" src="logo.png" />
+          <a class="font-headline-sm text-headline-sm text-navy-ink tracking-tight transition-opacity hover:opacity-80"
+            href="index.html">Quatro</a>
+        </div>
+
+        <nav id="desktopNav"
+          class="relative hidden lg:flex items-center gap-space-xs p-1.5 bg-[#EDF2EB] border border-[#DCE3D9] rounded-full">
+          <!-- The Elastic Pill Indicator -->
+          <div id="navElasticPill" style="opacity: 0;"></div>
+
+          <a data-nav-item="inicio"
+            class="relative z-10 px-space-md py-space-xs font-label-lg text-label-lg text-navy-ink/80 transition-colors rounded-full"
+            href="index.html">Inicio</a>
+
+          <!-- Productos Dropdown -->
+          <div data-nav-item="productos" class="relative z-10 group" id="desktopProductsDropdown">
+            <button type="button" aria-expanded="true"
+              class="px-space-md py-space-xs font-label-lg text-label-lg transition-colors text-white font-bold rounded-full inline-flex items-center gap-1 cursor-pointer whitespace-nowrap">
+              <span>Productos</span>
+              <span
+                class="material-symbols-outlined text-[18px] w-[18px] h-[18px] inline-block overflow-hidden align-middle select-none transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+            </button>
+            <!-- Dropdown Menu -->
+            <div class="absolute left-0 top-full pt-2 w-64 hidden group-hover:block transition-all duration-200 z-50">
+              <div
+                class="dropdown-glass rounded-2xl p-2 flex flex-col gap-1">
+                <a class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-[#EDF2EB]/80 text-navy-deep transition-colors"
+                  href="brownies.html">
+                  <div class="w-8 h-8 rounded-lg bg-[#D8BA96]/30 flex items-center justify-center text-[#8B6543]">
+                    <span class="material-symbols-outlined text-[18px]">bakery_dining</span>
+                  </div>
+                  <div>
+                    <span class="font-title-md text-title-md block leading-snug">Brownies</span>
+                    <span class="text-xs text-on-surface-variant block font-normal">Cacao 70% &amp; corazón fudge</span>
+                  </div>
+                </a>
+                <a aria-current="page"
+                  class="flex items-center gap-3 p-2.5 rounded-xl bg-[#EDF2EB]/90 text-navy-deep font-bold transition-colors"
+                  href="pastafrolas.html">
+                  <div class="w-8 h-8 rounded-lg bg-[#EDF2EB] flex items-center justify-center text-[#4A6349]">
+                    <span class="material-symbols-outlined text-[18px]">pie</span>
+                  </div>
+                  <div>
+                    <span class="font-title-md text-title-md block leading-snug">Pastafrolas</span>
+                    <span class="text-xs text-on-surface-variant block font-normal">Masa sablée &amp; enrejado</span>
+                  </div>
+                </a>
+                <a class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-[#EDF2EB]/80 text-navy-deep transition-colors"
+                  href="alfajores.html">
+                  <div class="w-8 h-8 rounded-lg bg-[#F5EDE1] flex items-center justify-center text-[#8B6543]">
+                    <span class="material-symbols-outlined text-[18px]">cookie</span>
+                  </div>
+                  <div>
+                    <span class="font-title-md text-title-md block leading-snug">Alfajores</span>
+                    <span class="text-xs text-on-surface-variant block font-normal">Extra dulce de leche
+                      repostero</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a data-nav-item="historia"
+            class="relative z-10 px-space-md py-space-xs font-label-lg text-label-lg text-navy-ink/80 transition-colors rounded-full"
+            href="index.html#nuestra-historia">Nuestra Historia</a>
+        </nav>
+
+        <div class="flex items-center gap-space-md">
+          <a class="inline-flex items-center gap-space-xs bg-navy-ink text-on-primary px-space-md py-space-sm rounded-full font-label-lg text-label-lg shadow-[0_2px_12px_rgba(27,45,72,0.18)] hover:bg-navy-deep transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0"
+            href="https://wa.me/3434685501?text=Hola%20Quatro!%20Quiero%20pedir%20una%20pastafrola"
+            rel="noopener noreferrer" target="_blank">
+            <span class="material-symbols-outlined text-[18px]">chat</span>
+            <span class="hidden sm:inline">Pedir por WhatsApp</span>
+            <span class="sm:hidden">WhatsApp</span>
+          </a>
+
+          <button id="mobileMenuBtn" aria-label="Abrir menú"
+            class="lg:hidden w-9 h-9 rounded-full bg-[#EDF2EB] border border-[#DCE3D9] flex items-center justify-center text-navy-ink hover:bg-[#DCE3D9] transition-colors">
+            <span class="material-symbols-outlined text-[20px]" id="mobileMenuIcon">menu</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobileMenu"
+        class="hidden lg:hidden bg-surface border-t border-[#DCE3D9] px-margin-mobile py-space-md shadow-lg">
+        <nav class="flex flex-col gap-space-xs">
+          <a class="px-space-md py-space-sm text-navy-ink hover:bg-[#EDF2EB] rounded-xl font-medium"
+            href="index.html">Inicio</a>
+
+          <!-- Mobile Productos Accordion/Dropdown -->
+          <div class="flex flex-col">
+            <button id="mobileProductsToggle" type="button"
+              class="px-space-md py-space-sm bg-navy-ink text-on-primary rounded-xl font-bold flex items-center justify-between w-full text-left">
+              <span>Productos</span>
+              <span class="material-symbols-outlined text-[20px] transition-transform duration-200"
+                id="mobileProductsArrow">expand_more</span>
+            </button>
+            <div id="mobileProductsSubmenu" class="flex flex-col pl-4 py-1 gap-1 border-l-2 border-[#DCE3D9] ml-4 my-1">
+              <a class="px-space-md py-space-xs text-navy-ink/80 hover:text-navy-deep hover:bg-[#EDF2EB] rounded-lg text-sm flex items-center gap-2"
+                href="brownies.html">
+                <span class="material-symbols-outlined text-[16px] text-[#8B6543]">bakery_dining</span>
+                <span>Brownies</span>
+              </a>
+              <a class="px-space-md py-space-xs bg-[#EDF2EB] text-navy-ink font-bold rounded-lg text-sm flex items-center gap-2"
+                href="pastafrolas.html">
+                <span class="material-symbols-outlined text-[16px] text-[#4A6349]">pie</span>
+                <span>Pastafrolas</span>
+              </a>
+              <a class="px-space-md py-space-xs text-navy-ink/80 hover:text-navy-deep hover:bg-[#EDF2EB] rounded-lg text-sm flex items-center gap-2"
+                href="alfajores.html">
+                <span class="material-symbols-outlined text-[16px] text-[#8B6543]">cookie</span>
+                <span>Alfajores</span>
+              </a>
+            </div>
+          </div>
+
+          <a class="px-space-md py-space-sm text-navy-ink hover:bg-[#EDF2EB] rounded-xl font-medium"
+            href="index.html#nuestra-historia">Nuestra Historia</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full pt-28 bg-surface">
+    <div class="flex flex-col w-full relative">
+      <div class="w-full max-w-[1200px] mx-auto px-margin-mobile md:px-margin space-y-space-xl pb-space-xl">
+
+        <!-- Hero Section -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center pt-space-md">
+          <div class="lg:col-span-5 space-y-space-md order-2 lg:order-1">
+            <div
+              class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-sage-tint text-sage-deep border border-sage-pale font-label-sm text-label-sm font-semibold">
+              <span class="material-symbols-outlined text-[16px]">verified</span>
+              <span>100% Casera con Manteca de Campo</span>
+            </div>
+
+            <div class="space-y-space-xs">
+              <h1 class="font-display-lg text-headline-lg lg:text-display-lg text-navy-ink tracking-tight leading-none">
+                Nuestras Pastafrolas
+              </h1>
+              <p class="font-headline-sm text-headline-sm text-warm-cinnamon italic">
+                El aroma de domingo que llena la cocina
+              </p>
+            </div>
+
+            <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+              Masa sablée quebradiza elaborada con manteca de campo, ralladura fresca de limón y esencia de vainilla
+              pura. Un enrejado dorado milimétrico y rellenos calientes que rinden tributo a las meriendas compartidas.
+            </p>
+
+            <!-- Fresh Batch Badge -->
+            <div
+              class="p-space-md rounded-xl bg-gradient-to-r from-[#F7F1E8] to-sage-tint border border-toasted-wheat/40 shadow-sm flex items-center justify-between gap-space-md">
+              <div class="flex items-center gap-space-sm">
+                <div
+                  class="w-10 h-10 rounded-full bg-sage-pale flex items-center justify-center text-sage-deep border border-sage-soft/50">
+                  <span class="material-symbols-outlined text-[20px]">oven_gen</span>
+                </div>
+                <div>
+                  <p class="font-title-md text-title-md text-navy-ink leading-tight">Hornadas Diarias</p>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Entrega recién salida del molde</p>
+                </div>
+              </div>
+              <div class="text-right">
+                <span class="font-label-sm text-label-sm text-sage-deep font-bold">100% ARTESANAL</span>
+                <p class="font-body-sm text-body-sm text-warm-cinnamon font-medium">100% Casero &amp; Fresco</p>
+              </div>
+            </div>
+
+            <!-- Direct CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center gap-space-sm pt-space-xs">
+              <a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-sm bg-navy-ink text-on-primary px-space-lg py-space-md rounded-full font-label-lg text-label-lg shadow-md hover:bg-navy-deep transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0"
+                href="https://wa.me/3434685501?text=Hola%20chicos%20de%20Quatro!%20Quiero%20encargar%20una%20pastafrola%20reci%C3%A9n%20horneada."
+                rel="noopener noreferrer" target="_blank">
+                <span class="material-symbols-outlined text-[20px]">chat</span>
+                <span>Pedir por WhatsApp</span>
+              </a>
+              <a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-md py-space-md font-label-lg text-label-lg text-sage-deep hover:text-navy-ink transition-colors"
+                href="#sabores">
+                <span>Explorar Variedades</span>
+                <span class="material-symbols-outlined text-[18px]">south</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Focal Photography -->
+          <div class="lg:col-span-7 relative order-1 lg:order-2">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-sage-tint border-2 border-sage-pale group">
+              <img alt="Pastafrola artesanal dorada con enrejado clásico y té"
+                class="w-full h-[380px] md:h-[500px] object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0iQUM85HdNOtHEojdM2Na0t6qftoMfY_IR9DHVPnSEqGwldaffMRasb3wV3b0-N31HqCisufQuXBuijiBIVayOx53oRwAsOty7dL-zhMK4OKHirDrt1fUOPavEXBVE-6Vd4zsjxJjwNPjCy5bZsaCys3q_3qzov2tcq7UUhqb317XBLBMFlqSGGruRkJdBVscLWI0rNsvZsN5MhLJMI72uAAFy98Hb2p1c0_w8uOT9Zmv2fjAsXM" />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-navy-ink/60 via-transparent to-transparent pointer-events-none">
+              </div>
+
+              <!-- Floating Pill on Image -->
+              <div
+                class="absolute bottom-6 left-6 right-6 md:right-auto bg-[#FBF9F5]/95 backdrop-blur-md px-space-md py-space-sm rounded-2xl shadow-lg border border-toasted-wheat/50 flex items-center gap-space-md">
+                <div
+                  class="w-12 h-12 rounded-full bg-sage-pale flex items-center justify-center shrink-0 border border-sage-soft">
+                  <span class="material-symbols-outlined text-[22px] text-sage-deep">eco</span>
+                </div>
+                <div>
+                  <p class="font-title-md text-title-md text-navy-ink leading-tight">Mantequilla Real &amp; Cítricos</p>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Sin conservantes ni esencias artificiales
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Size & Experience Selection Interactive -->
+        <section class="space-y-space-lg pt-space-md" id="sabores">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+            <div>
+              <span class="font-label-sm text-label-sm uppercase tracking-widest text-warm-cinnamon font-bold">Carta de
+                Selección</span>
+              <h2 class="font-headline-lg text-headline-lg text-navy-ink mt-space-xs">Nuestras 3 Variedades Maestras
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+                Cada pastafrola se amasa individualmente. Elegí el tamaño que mejor acompañe tus mates o la sobremesa
+                del domingo.
+              </p>
+            </div>
+
+            <!-- Size Toggle Switch -->
+            <div
+              class="inline-flex p-1.5 bg-sage-tint rounded-full border border-sage-soft/70 shadow-inner self-start md:self-auto">
+              <button
+                class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg transition-all duration-300 bg-sage-deep text-on-primary shadow-sm flex items-center gap-1.5"
+                id="size-btn-ind" onclick="switchSize('ind')">
+                <span class="material-symbols-outlined text-[16px]">person</span>
+                <span>Individual (15 cm)</span>
+              </button>
+              <button
+                class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg transition-all duration-300 text-on-surface-variant hover:text-navy-ink flex items-center gap-1.5"
+                id="size-btn-fam" onclick="switchSize('fam')">
+                <span class="material-symbols-outlined text-[16px]">groups</span>
+                <span>Familiar (26 cm)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Variety Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+
+            <!-- Flavor 1: Membrillo Clásico -->
+            <div
+              class="flex flex-col bg-surface-container-lowest rounded-2xl border border-toasted-wheat/40 shadow-sm p-space-lg hover:shadow-xl hover:border-toasted-wheat transition-all duration-300 transform hover:-translate-y-1 relative group">
+              <div class="relative w-full h-56 rounded-xl overflow-hidden mb-space-md bg-[#F7F1E8]">
+                <img alt="Pastafrola artesanal de membrillo con enrejado clásico"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuASSnG2ReQ8-NM9Pr4w7jc3LiEINxDb7OLIhIpzeOAGuuFvhzCSeLRtUWvNgssAYlvJqkOKO_62WwfbMUojkkVmf9O3kbxTouGnATul_hak5HfSzLic_H0NElCJCo_Q-rggdf5empsB1vkBDvdFYdObXaWk-P1u6DndjRXug-PcfQL7X34DAm_uvSWVmYyNTjlt4FOQdm1fKJWiwP2hVqTy3Y6cFrEutSiQ5nrL8vr8jax9u9r2O_o" />
+                <div
+                  class="absolute top-3 left-3 bg-[#E5D7C2]/95 backdrop-blur-sm text-navy-ink text-label-sm font-label-sm px-3 py-1 rounded-full border border-toasted-wheat/60 shadow-sm font-semibold">
+                  La Favorita
+                </div>
+              </div>
+              <div class="flex items-center justify-between mb-space-xs">
+                <h3 class="font-headline-sm text-headline-sm text-navy-ink">La Clásica de Membrillo</h3>
+                <span class="text-toasted-wheat text-title-lg font-title-lg flex items-center">
+                  <span class="material-symbols-outlined text-[18px]">wine_bar</span>
+                </span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md flex-grow">
+                Membrillo artesanal de textura densa reducido con notas sutiles de oporto añejo, envuelto en un enrejado
+                dorado con pincelado de almíbar cítrico.
+              </p>
+              <div
+                class="p-space-sm bg-sage-tint/80 border border-sage-pale rounded-xl mb-space-md flex items-center justify-between">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Rendimiento estimado:</span>
+                <span class="font-label-lg text-label-lg text-sage-deep font-semibold" id="yield-1">1 a 2
+                  porciones</span>
+              </div>
+              <div class="flex items-center justify-between pt-space-xs">
+                <div>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant block">Precio</span>
+                  <span class="font-headline-md text-headline-md text-navy-ink font-bold" id="price-1">$4.200</span>
+                </div>
+                <a class="inline-flex items-center gap-1.5 bg-navy-ink text-on-primary px-space-md py-space-sm rounded-full font-label-lg text-label-lg hover:bg-navy-deep transition-colors"
+                  id="btn-wa-1"
+                  href="https://wa.me/3434685501?text=Hola!%20Quiero%20pedir%20la%20Pastafrola%20Cl%C3%A1sica%20de%20Membrillo%20Individual%20(15cm)"
+                  rel="noopener noreferrer" target="_blank">
+                  <span>Elegir</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Flavor 2: Dulce de Batata con Chocolate -->
+            <div
+              class="flex flex-col bg-surface-container-lowest rounded-2xl border border-toasted-wheat/40 shadow-sm p-space-lg hover:shadow-xl hover:border-toasted-wheat transition-all duration-300 transform hover:-translate-y-1 relative group">
+              <div class="relative w-full h-56 rounded-xl overflow-hidden mb-space-md bg-[#F7F1E8]">
+                <img alt="Pastafrola artesanal de batata y chocolate"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP_jzMOmqE65dyXUtflTjtAgwf6zGLE6komHdCIzTIu6vyRy9lcPZVxK2NjnHDno9gN8ANmlIpWKv3JDM6x1Pu1RKys4Q6gIhnB623Lnuuv0_dCBUwjRO2zAtWH8VttJj2xMUDNuyKv7hAYQcYQtBDUhRB_BTi3CgThB_ADluTNAUN241VzZZfkTiL-ERsZIpurPPVpjKlScTgI7Ygttsfs99E2Or8EXtevsyp9wQQAXsZUCM5WaU" />
+                <div
+                  class="absolute top-3 left-3 bg-[#E5D7C2]/95 backdrop-blur-sm text-navy-ink text-label-sm font-label-sm px-3 py-1 rounded-full border border-toasted-wheat/60 shadow-sm font-semibold">
+                  Receta de la Abuela
+                </div>
+              </div>
+              <div class="flex items-center justify-between mb-space-xs">
+                <h3 class="font-headline-sm text-headline-sm text-navy-ink">Batata &amp; Chocolate</h3>
+                <span class="text-toasted-wheat text-title-lg font-title-lg flex items-center">
+                  <span class="material-symbols-outlined text-[18px]">cookie</span>
+                </span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md flex-grow">
+                Batata cremosa de cocción lenta combinada con chips de chocolate semi-amargo al 60% que se funden dentro
+                de la masa crocante.
+              </p>
+              <div
+                class="p-space-sm bg-sage-tint/80 border border-sage-pale rounded-xl mb-space-md flex items-center justify-between">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Rendimiento estimado:</span>
+                <span class="font-label-lg text-label-lg text-sage-deep font-semibold" id="yield-2">1 a 2
+                  porciones</span>
+              </div>
+              <div class="flex items-center justify-between pt-space-xs">
+                <div>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant block">Precio</span>
+                  <span class="font-headline-md text-headline-md text-navy-ink font-bold" id="price-2">$4.500</span>
+                </div>
+                <a class="inline-flex items-center gap-1.5 bg-navy-ink text-on-primary px-space-md py-space-sm rounded-full font-label-lg text-label-lg hover:bg-navy-deep transition-colors"
+                  id="btn-wa-2"
+                  href="https://wa.me/3434685501?text=Hola!%20Quiero%20pedir%20la%20Pastafrola%20de%20Batata%20con%20Chocolate%20Individual%20(15cm)"
+                  rel="noopener noreferrer" target="_blank">
+                  <span>Elegir</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Flavor 3: Dúo Mixto -->
+            <div
+              class="flex flex-col bg-surface-container-lowest rounded-2xl border border-toasted-wheat/40 shadow-sm p-space-lg hover:shadow-xl hover:border-toasted-wheat transition-all duration-300 transform hover:-translate-y-1 relative group">
+              <div class="relative w-full h-56 rounded-xl overflow-hidden mb-space-md bg-[#F7F1E8]">
+                <img alt="Pastafrola mitad membrillo y mitad dulce de leche"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo0DXhqDtAR1ynDnkMzVAOhYXEk9G-or9SESjRp1YcuLEOeG-aWBTuzA37xQ7tfqyehS-kp03z1iTDK7KaGy4nsq5aIfgBCuI9vbf-E1goq4YVs0ci_EbyZ-4jlI2_kgWVANrHljSc8OzPhlEKuL1tTJlHVnPrKxVrlPVOVHjHbnpnr2Fm8h1RstRCWb0JoSUR2JvIFsbNV84m3zIwOXzBCM2lly_l1Y5uE59fXzmCU5bkjqUD2aE" />
+                <div
+                  class="absolute top-3 left-3 bg-[#E5D7C2]/95 backdrop-blur-sm text-navy-ink text-label-sm font-label-sm px-3 py-1 rounded-full border border-toasted-wheat/60 shadow-sm font-semibold">
+                  Especial Mitad &amp; Mitad
+                </div>
+              </div>
+              <div class="flex items-center justify-between mb-space-xs">
+                <h3 class="font-headline-sm text-headline-sm text-navy-ink">Dúo Mixto</h3>
+                <span class="text-toasted-wheat text-title-lg font-title-lg flex items-center">
+                  <span class="material-symbols-outlined text-[18px]">contrast</span>
+                </span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md flex-grow">
+                Para los indecisos: mitad con el auténtico membrillo al oporto y mitad relleno de dulce de leche
+                repostero colonial espolvoreado con coco rallado.
+              </p>
+              <div
+                class="p-space-sm bg-sage-tint/80 border border-sage-pale rounded-xl mb-space-md flex items-center justify-between">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Rendimiento estimado:</span>
+                <span class="font-label-lg text-label-lg text-sage-deep font-semibold" id="yield-3">1 a 2
+                  porciones</span>
+              </div>
+              <div class="flex items-center justify-between pt-space-xs">
+                <div>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant block">Precio</span>
+                  <span class="font-headline-md text-headline-md text-navy-ink font-bold" id="price-3">$4.600</span>
+                </div>
+                <a class="inline-flex items-center gap-1.5 bg-navy-ink text-on-primary px-space-md py-space-sm rounded-full font-label-lg text-label-lg hover:bg-navy-deep transition-colors"
+                  id="btn-wa-3"
+                  href="https://wa.me/3434685501?text=Hola!%20Quiero%20pedir%20la%20Pastafrola%20D%C3%BAo%20Mixto%20Individual%20(15cm)"
+                  rel="noopener noreferrer" target="_blank">
+                  <span>Elegir</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Craft Process Steps -->
+        <section
+          class="bg-gradient-to-br from-sage-tint via-[#E4ECE1] to-sage-pale rounded-3xl p-space-lg md:p-space-xl space-y-space-lg shadow-sm border border-sage-soft">
+          <div class="max-w-2xl">
+            <span class="font-label-sm text-label-sm uppercase tracking-widest text-sage-deep font-bold">Nuestro
+              Secreto</span>
+            <h2 class="font-headline-lg text-headline-lg text-navy-ink mt-space-xs">El Ritual del Horneado Lento</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              No apresuramos los tiempos. La auténtica masa sablée no se bate mecánicamente: se arena a mano para que
+              conserve su friabilidad característica.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            <!-- Step 1 -->
+            <div
+              class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm border border-sage-soft/60 space-y-space-sm flex flex-col justify-between">
+              <div>
+                <div
+                  class="w-12 h-12 rounded-full bg-sage-deep text-on-primary flex items-center justify-center font-headline-sm text-headline-sm mb-space-sm shadow-sm">
+                  1
+                </div>
+                <h4 class="font-title-lg text-title-lg text-navy-ink">Amasado Manual &amp; Manteca Fría</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mt-space-xs">
+                  Arenado en frío con yemas de campo seleccionadas y ralladura fina de limones frescos recién
+                  cosechados, sin transmitir calor para lograr esa textura que se deshace en el paladar.
+                </p>
+              </div>
+              <div
+                class="pt-space-sm flex items-center gap-space-xs text-sage-deep font-label-sm text-label-sm font-semibold">
+                <span class="material-symbols-outlined text-[16px]">pan_tool</span>
+                <span>Tacto 100% artesanal</span>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div
+              class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm border border-sage-soft/60 space-y-space-sm flex flex-col justify-between">
+              <div>
+                <div
+                  class="w-12 h-12 rounded-full bg-toasted-wheat text-navy-ink flex items-center justify-center font-headline-sm text-headline-sm mb-space-sm shadow-sm font-bold">
+                  2
+                </div>
+                <h4 class="font-title-lg text-title-lg text-navy-ink">Enrejado a Cuchillo con Paciencia</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mt-space-xs">
+                  Tiras estiradas una a una con el grosor exacto de 8mm. Se entrelazan diagonalmente para que el relleno
+                  respire durante la cocción y mantenga su humedad jugosa intacta.
+                </p>
+              </div>
+              <div
+                class="pt-space-sm flex items-center gap-space-xs text-warm-cinnamon font-label-sm text-label-sm font-semibold">
+                <span class="material-symbols-outlined text-[16px]">grid_goldenratio</span>
+                <span>Geometría casera</span>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div
+              class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm border border-sage-soft/60 space-y-space-sm flex flex-col justify-between">
+              <div>
+                <div
+                  class="w-12 h-12 rounded-full bg-sage-mid text-on-primary flex items-center justify-center font-headline-sm text-headline-sm mb-space-sm shadow-sm">
+                  3
+                </div>
+                <h4 class="font-title-lg text-title-lg text-navy-ink">Horno Suave &amp; Baño de Brillo</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mt-space-xs">
+                  Cocción lenta a 165°C para lograr un tono avellanado uniforme sin quemar el dulce. Se pincela aún
+                  caliente con almíbar de vainilla y oporto para el brillo característico.
+                </p>
+              </div>
+              <div
+                class="pt-space-sm flex items-center gap-space-xs text-sage-deep font-label-sm text-label-sm font-semibold">
+                <span class="material-symbols-outlined text-[16px]">timer</span>
+                <span>45 minutos de paciencia</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- WhatsApp Order Callout Banner -->
+        <section
+          class="bg-navy-ink rounded-3xl p-space-lg md:p-space-xl text-on-primary shadow-xl relative overflow-hidden border border-navy-deep">
+          <div class="absolute -right-16 -bottom-16 w-80 h-80 rounded-full bg-sage-mid/20 blur-3xl pointer-events-none">
+          </div>
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+            <div class="lg:col-span-8 space-y-space-sm">
+              <div
+                class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-sage-deep text-sage-pale text-label-sm font-label-sm border border-sage-soft/40">
+                <span class="material-symbols-outlined text-[16px]">calendar_today</span>
+                <span>Horneamos de Martes a Domingos</span>
+              </div>
+              <h3 class="font-headline-lg text-headline-lg leading-tight text-surface-container-lowest">
+                Encargá tu pastafrola recién horneada
+              </h3>
+              <p class="font-body-lg text-body-lg text-sage-pale max-w-xl">
+                Tomamos pedidos con 24 horas de anticipación para garantizar que recibas una masa fresca, crocante y
+                perfumada. Horneada con manteca real e ingredientes de primera calidad.
+              </p>
+              <div class="flex flex-wrap items-center gap-space-md pt-space-xs text-body-sm text-[#F7F1E8]">
+                <span class="flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-[18px] text-toasted-wheat">check_circle</span>
+                  Retiro en taller o envío a domicilio
+                </span>
+                <span class="flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-[18px] text-toasted-wheat">check_circle</span>
+                  Opciones para regalos y eventos
+                </span>
+              </div>
+            </div>
+
+            <div class="lg:col-span-4 flex flex-col items-center lg:items-end justify-center pt-space-md lg:pt-0">
+              <a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-sm bg-toasted-wheat text-navy-deep font-bold px-space-xl py-space-md rounded-full font-title-md text-title-md shadow-2xl hover:bg-[#D8BA96] transition-all duration-200 transform hover:-translate-y-1"
+                href="https://wa.me/3434685501?text=Hola%20Quatro!%20Quisiera%20hacer%20un%20pedido%20de%20pastafrola%20artesanal."
+                rel="noopener noreferrer" target="_blank">
+                <span class="material-symbols-outlined text-[24px]">chat</span>
+                <span>Pedir por WhatsApp</span>
+              </a>
+              <span class="font-label-sm text-label-sm text-sage-pale mt-space-xs">Respuesta promedio en menos de 15
+                min</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer
+    class="w-full bg-[#F5F2EB] text-on-surface mt-space-xl border-t border-sage-pale shadow-[0_-1px_8px_rgba(27,45,72,0.02)]">
+    <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin py-space-xl">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-space-xl">
+        <div class="md:col-span-1 space-y-space-sm">
+          <div class="flex items-center gap-space-sm">
+            <img alt="Logo Quatro Pastelería" class="h-9 w-9 object-contain rounded-lg shadow-xs" src="logo.png" />
+            <span class="font-headline-sm text-headline-sm text-navy-ink">Quatro</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            El emprendimiento de cuatro amigos reposteros horneando delicias caseras con materias primas nobles y
+            recetas de toda la vida. Pasión por la pastelería real.
+          </p>
+        </div>
+
+        <div class="space-y-space-sm">
+          <h4 class="font-title-md text-title-md text-navy-ink">Horarios de Horneado</h4>
+          <ul class="font-body-sm text-body-sm text-on-surface-variant space-y-space-xs">
+            <li>Lunes a Viernes: 08:00 - 19:30</li>
+            <li>Sábados: 09:00 - 15:00</li>
+            <li>Domingos: Horneado especial &amp; entregas</li>
+            <li class="font-label-sm text-sage-deep pt-space-xs font-semibold">Hornadas frescas cada mañana</li>
+          </ul>
+        </div>
+
+        <div class="space-y-space-sm">
+          <h4 class="font-title-md text-title-md text-navy-ink">Comunidad Quatro</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Seguí el día a día de nuestro taller de horneado, recetas compartidas y momentos en la cocina.
+          </p>
+          <div class="flex items-center gap-space-sm pt-space-xs">
+            <a aria-label="Instagram"
+              class="w-9 h-9 rounded-full bg-sage-tint flex items-center justify-center text-sage-deep hover:bg-sage-deep hover:text-on-primary transition-colors border border-sage-pale"
+              href="https://wa.me/3434685501?text=Hola%20Quatro!%20Los%20vi%20en%20redes" target="_blank"
+              rel="noopener noreferrer">
+              <span class="material-symbols-outlined text-[18px]">photo_camera</span>
+            </a>
+            <a aria-label="TikTok"
+              class="w-9 h-9 rounded-full bg-sage-tint flex items-center justify-center text-sage-deep hover:bg-sage-deep hover:text-on-primary transition-colors border border-sage-pale"
+              href="https://wa.me/3434685501?text=Hola%20Quatro!%20Los%20vi%20en%20TikTok" target="_blank"
+              rel="noopener noreferrer">
+              <span class="material-symbols-outlined text-[18px]">play_circle</span>
+            </a>
+            <a aria-label="Ubicación y Retiros"
+              class="w-9 h-9 rounded-full bg-sage-tint flex items-center justify-center text-sage-deep hover:bg-sage-deep hover:text-on-primary transition-colors border border-sage-pale"
+              href="https://wa.me/3434685501?text=Hola%20Quatro!%20Donde%20es%20el%20punto%20de%20retiro%3F"
+              target="_blank" rel="noopener noreferrer">
+              <span class="material-symbols-outlined text-[18px]">pin_drop</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="space-y-space-sm">
+          <h4 class="font-title-md text-title-md text-navy-ink">Atención Directa</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            ¿Pedidos para eventos o consultas especiales? Escribinos directo a nuestra línea de WhatsApp.
+          </p>
+          <a class="inline-flex items-center gap-space-xs bg-navy-ink text-on-primary px-space-md py-space-sm rounded-lg font-label-lg text-label-lg hover:bg-navy-deep transition-colors duration-150 shadow-sm"
+            href="https://wa.me/3434685501" rel="noopener noreferrer" target="_blank">
+            <span class="material-symbols-outlined text-[18px]">send</span>
+            <span>Contactar: 3434685501</span>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm border-t border-sage-pale/60">
+        <p>© 2025 Quatro Pastelería Artesanal. Hecho con amor por 4 amigos.</p>
+        <p class="text-label-sm font-label-sm text-warm-cinnamon font-semibold">Pastelería 100% casera hecha a mano 🥐✨
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Logic -->
+  <script>
+    let currentSize = 'ind';
+
+    function switchSize(size) {
+      currentSize = size;
+      const btnInd = document.getElementById('size-btn-ind');
+      const btnFam = document.getElementById('size-btn-fam');
+      const p1 = document.getElementById('price-1');
+      const p2 = document.getElementById('price-2');
+      const p3 = document.getElementById('price-3');
+      const y1 = document.getElementById('yield-1');
+      const y2 = document.getElementById('yield-2');
+      const y3 = document.getElementById('yield-3');
+
+      const wa1 = document.getElementById('btn-wa-1');
+      const wa2 = document.getElementById('btn-wa-2');
+      const wa3 = document.getElementById('btn-wa-3');
+
+      if (size === 'ind') {
+        btnInd.className = "px-space-md py-space-xs rounded-full font-label-lg text-label-lg transition-all duration-300 bg-sage-deep text-on-primary shadow-sm flex items-center gap-1.5";
+        btnFam.className = "px-space-md py-space-xs rounded-full font-label-lg text-label-lg transition-all duration-300 text-on-surface-variant hover:text-navy-ink flex items-center gap-1.5";
+        p1.textContent = "$4.200";
+        p2.textContent = "$4.500";
+        p3.textContent = "$4.600";
+        y1.textContent = "1 a 2 porciones";
+        y2.textContent = "1 a 2 porciones";
+        y3.textContent = "1 a 2 porciones";
+
+        wa1.href = "https://wa.me/3434685501?text=Hola!%20Quiero%20pedir%20la%20Pastafrola%20Cl%C3%A1sica%20de%20Membrillo%20Individual%20(15cm)";
+        wa2.href = "https://wa.me/3434685501?text=Hola!%20Quiero%20pedir%20la%20Pastafrola%20de%20Batata%20con%20Chocolate%20Individual%20(15cm)";
+        wa3.href = "https://wa.me/3434685501?text=Hola!%20Quiero%20pedir%20la%20Pastafrola%20D%C3%BAo%20Mixto%20Individual%20(15cm)";
+      } else {
+        btnFam.className = "px-space-md py-space-xs rounded-full font-label-lg text-label-lg transition-all duration-300 bg-sage-deep text-on-primary shadow-sm flex items-center gap-1.5";
+        btnInd.className = "px-space-md py-space-xs rounded-full font-label-lg text-label-lg transition-all duration-300 text-on-surface-variant hover:text-navy-ink flex items-center gap-1.5";
+        p1.textContent = "$8.900";
+        p2.textContent = "$9.500";
+        p3.textContent = "$9.800";
+        y1.textContent = "8 a 10 porciones";
+        y2.textContent = "8 a 10 porciones";
+        y3.textContent = "8 a 10 porciones";
+
+        wa1.href = "https://wa.me/3434685501?text=Hola!%20Quiero%20pedir%20la%20Pastafrola%20Cl%C3%A1sica%20de%20Membrillo%20Familiar%20(26cm)";
+        wa2.href = "https://wa.me/3434685501?text=Hola!%20Quiero%20pedir%20la%20Pastafrola%20de%20Batata%20con%20Chocolate%20Familiar%20(26cm)";
+        wa3.href = "https://wa.me/3434685501?text=Hola!%20Quiero%20pedir%20la%20Pastafrola%20D%C3%BAo%20Mixto%20Familiar%20(26cm)";
+      }
+    }
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileIcon = document.getElementById('mobileMenuIcon');
+
+    mobileBtn?.addEventListener('click', () => {
+      if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('hidden');
+        mobileIcon.textContent = 'close';
+      } else {
+        mobileMenu.classList.add('hidden');
+        mobileIcon.textContent = 'menu';
+      }
+    });
+
+    // Mobile Products Accordion Toggle
+    const mobileProductsToggle = document.getElementById('mobileProductsToggle');
+    const mobileProductsSubmenu = document.getElementById('mobileProductsSubmenu');
+    const mobileProductsArrow = document.getElementById('mobileProductsArrow');
+
+    mobileProductsToggle?.addEventListener('click', () => {
+      if (mobileProductsSubmenu.classList.contains('hidden')) {
+        mobileProductsSubmenu.classList.remove('hidden');
+        mobileProductsArrow.style.transform = 'rotate(180deg)';
+      } else {
+        mobileProductsSubmenu.classList.add('hidden');
+        mobileProductsArrow.style.transform = 'rotate(0deg)';
+      }
+    });
+
+    // Smooth Page Fade Transition
+    document.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('page-loaded');
+    });
+
+    // Intercept local page links for smooth out-transition
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (!href || href.startsWith('#') || href.startsWith('javascript') || href.startsWith('https://wa.me') || link.target === '_blank') return;
+
+      link.addEventListener('click', (e) => {
+        if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+        const targetUrl = new URL(link.href, window.location.href);
+        if (targetUrl.origin === window.location.origin) {
+          e.preventDefault();
+          document.body.classList.remove('page-loaded');
+          document.body.classList.add('page-leaving');
+          setTimeout(() => {
+            window.location.href = href;
+          }, 220);
+        }
+      });
+    });
+
+    // Elastic Nav Indicator Logic
+    const desktopNav = document.getElementById('desktopNav');
+    const pill = document.getElementById('navElasticPill');
+    const navItems = desktopNav ? desktopNav.querySelectorAll('[data-nav-item]') : [];
+    let activeItem = desktopNav ? desktopNav.querySelector('[data-nav-item="productos"]') : null;
+    let currentHoveredItem = null;
+
+    function updatePillPosition(targetEl) {
+      if (!pill || !desktopNav || !targetEl) return;
+      
+      const btn = targetEl.tagName === 'A' ? targetEl : (targetEl.querySelector('button') || targetEl);
+      const navRect = desktopNav.getBoundingClientRect();
+      const targetRect = btn.getBoundingClientRect();
+
+      const newLeft = targetRect.left - navRect.left;
+      const newTop = targetRect.top - navRect.top;
+      const newWidth = targetRect.width;
+      const newHeight = targetRect.height;
+
+      pill.style.left = `${newLeft}px`;
+      pill.style.top = `${newTop}px`;
+      pill.style.width = `${newWidth}px`;
+      pill.style.height = `${newHeight}px`;
+      pill.style.opacity = '1';
+
+      navItems.forEach(item => {
+        const linkOrBtn = item.tagName === 'A' ? item : item.querySelector('button');
+        if (!linkOrBtn) return;
+        if (item === targetEl) {
+          linkOrBtn.classList.add('text-white', 'font-bold');
+          linkOrBtn.classList.remove('text-navy-ink/80');
+        } else {
+          linkOrBtn.classList.remove('text-white', 'font-bold');
+          linkOrBtn.classList.add('text-navy-ink/80');
+        }
+      });
+    }
+
+    function syncPill() {
+      const target = currentHoveredItem || activeItem;
+      if (target) updatePillPosition(target);
+    }
+
+    syncPill();
+    requestAnimationFrame(syncPill);
+    setTimeout(syncPill, 50);
+    setTimeout(syncPill, 150);
+    setTimeout(syncPill, 350);
+
+    if (document.fonts) {
+      document.fonts.ready.then(syncPill);
+    }
+    window.addEventListener('resize', syncPill);
+
+    navItems.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        currentHoveredItem = item;
+        updatePillPosition(item);
+      });
+    });
+
+    desktopNav?.addEventListener('mouseleave', () => {
+      currentHoveredItem = null;
+      if (activeItem) {
+        updatePillPosition(activeItem);
+      }
+    });
+  </script>
+</body>
+
+</html>

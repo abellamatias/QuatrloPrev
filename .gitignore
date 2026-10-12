@@ -1,0 +1,19 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary & Scratch Files
+*.tmp
+*.log
+scratch/
+test_*.js
+test_*.html
+test_*.png
+probe.js
+inspect_nav.py
+
+# IDE & Editor Folders
+.vscode/
+.idea/
+.gemini/

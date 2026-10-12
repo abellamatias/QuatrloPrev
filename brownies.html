@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Brownies de Chocolate Puro | Quatro Pastelería Artesanal</title>
+  <meta name="description"
+    content="Brownies artesanales Quatro: cacao amargo al 70%, centro húmedo fudge, nueces crocantes y escamas de sal marina patagónica. Horneados al día por 4 amigos pasteleros." />
+  <link rel="icon" type="image/jpeg" href="logo.png" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main> :first-child {
+        margin-top: 0 !important;
+      }
+
+      main> :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Smooth page fade transition */
+    body {
+      opacity: 0;
+      transition: opacity 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    body.page-loaded {
+      opacity: 1;
+    }
+
+    body.page-leaving {
+      opacity: 0;
+      transition: opacity 0.25s cubic-bezier(0.4, 0, 1, 1);
+    }
+
+    /* Elastic nav active indicator */
+    #navElasticPill {
+      position: absolute;
+      background-color: #041832;
+      border-radius: 9999px;
+      pointer-events: none;
+      z-index: 0;
+      box-shadow: 0 2px 8px rgba(4, 24, 50, 0.25);
+      transition: left 0.28s cubic-bezier(0.25, 1, 0.5, 1),
+        top 0.28s cubic-bezier(0.25, 1, 0.5, 1),
+        width 0.28s cubic-bezier(0.25, 1, 0.5, 1),
+        height 0.28s cubic-bezier(0.25, 1, 0.5, 1),
+        opacity 0.2s ease;
+    }
+
+    #desktopNav a[data-nav-item],
+    #desktopNav [data-nav-item] > button {
+      transition: color 0.18s ease;
+    }
+
+    #desktopNav a[data-nav-item]:hover,
+    #desktopNav [data-nav-item]:hover > button {
+      color: #ffffff !important;
+    }
+
+    .material-symbols-outlined {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      max-width: 18px;
+      max-height: 18px;
+      overflow: hidden;
+      vertical-align: middle;
+      line-height: 1;
+      font-size: 18px;
+    }
+
+    .dropdown-glass {
+      background: rgba(255, 255, 255, 0.70) !important;
+      -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+      backdrop-filter: blur(20px) saturate(180%) !important;
+      border: 1px solid rgba(255, 255, 255, 0.75) !important;
+      box-shadow: 0 16px 36px rgba(4, 24, 50, 0.12), 0 2px 6px rgba(4, 24, 50, 0.04) !important;
+    }
+  </style>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-bright": "#f8faf6",
+            "on-background": "#191c1a",
+            "secondary-fixed-dim": "#e3c199",
+            "sage-soft": "#B7C4B2",
+            "inverse-surface": "#2e312f",
+            "secondary-container": "#F5EAD9",
+            "error-container": "#ffdad6",
+            "sage-pale": "#DCE3D9",
+            "sage-tint": "#EDF2EB",
+            "sage-light": "#E2EAE0",
+            "secondary-fixed": "#ffddb6",
+            "on-tertiary-container": "#c4d6f9",
+            "tertiary-fixed-dim": "#b5c7e9",
+            "on-error": "#ffffff",
+            "sage-deep": "#4A6349",
+            "surface-container-low": "#f2f4f0",
+            "background": "#f8faf6",
+            "navy-deep": "#041832",
+            "navy-ink": "#1B2D48",
+            "tertiary": "#344662",
+            "crema-canvas": "#FBF9F5",
+            "primary-fixed-dim": "#b2ceae",
+            "on-surface": "#191c1a",
+            "on-secondary-container": "#785e3d",
+            "secondary": "#8B6543",
+            "surface-container-high": "#e7e9e5",
+            "on-tertiary-fixed-variant": "#364764",
+            "on-primary-container": "#c1debd",
+            "on-primary-fixed-variant": "#344d34",
+            "surface-container": "#eceeea",
+            "toasted-wheat": "#C8A882",
+            "warm-cinnamon": "#8B6543",
+            "dulce-de-leche": "#D8BA96",
+            "caramel-soft": "#EEDDC9",
+            "sage-mid": "#8A9E8A",
+            "tertiary-fixed": "#d5e3ff",
+            "primary-container": "#1B2D48",
+            "on-surface-variant": "#434841",
+            "surface-container-highest": "#e1e3df",
+            "on-tertiary": "#ffffff",
+            "on-secondary": "#ffffff",
+            "surface-tint": "#4c654b",
+            "error": "#ba1a1a",
+            "surface-container-lowest": "#ffffff",
+            "primary": "#041832",
+            "on-secondary-fixed-variant": "#5a4224",
+            "on-tertiary-fixed": "#071c36",
+            "on-primary": "#ffffff",
+            "on-error-container": "#93000a",
+            "inverse-primary": "#b2ceae",
+            "outline-variant": "#c3c8bf",
+            "tertiary-container": "#4c5d7b",
+            "surface-variant": "#e1e3df",
+            "on-primary-fixed": "#09200c",
+            "outline": "#737971",
+            "surface": "#f8faf6",
+            "on-secondary-fixed": "#291801",
+            "surface-dim": "#d8dbd7",
+            "primary-fixed": "#ceeac9"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "1rem",
+            "margin-mobile": "1.25rem",
+            "margin": "3rem",
+            "space-xl": "2.5rem",
+            "space-lg": "1.5rem",
+            "gutter": "1.5rem",
+            "gutter-mobile": "1rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "body-md": ["Manrope", "sans-serif"],
+            "body-lg": ["Manrope", "sans-serif"],
+            "title-md": ["Manrope", "sans-serif"],
+            "headline-lg": ["EB Garamond", "serif"],
+            "display-lg-mobile": ["EB Garamond", "serif"],
+            "body-sm": ["Manrope", "sans-serif"],
+            "label-sm": ["Manrope", "sans-serif"],
+            "headline-md": ["EB Garamond", "serif"],
+            "headline-sm": ["EB Garamond", "serif"],
+            "display-lg": ["EB Garamond", "serif"],
+            "label-lg": ["Manrope", "sans-serif"],
+            "title-lg": ["Manrope", "sans-serif"],
+            "headline-lg-mobile": ["EB Garamond", "serif"]
+          },
+          "fontSize": {
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "body-lg": ["17px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "display-lg-mobile": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "700" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "500" }],
+            "headline-sm": ["22px", { "lineHeight": "30px", "fontWeight": "600" }],
+            "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "title-lg": ["19px", { "lineHeight": "26px", "fontWeight": "700" }],
+            "headline-lg-mobile": ["30px", { "lineHeight": "38px", "fontWeight": "500" }]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-[#D8BA96] selection:text-[#1B2D48]">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full z-50">
+    <div
+      class="w-full bg-[#EDF2EB] text-[#4A6349] border-b border-[#DCE3D9] text-center py-space-xs px-gutter-mobile md:px-gutter font-label-sm text-label-sm tracking-wide">
+      <p class="flex items-center justify-center gap-space-xs">
+        <span class="material-symbols-outlined text-[16px] text-[#4A6349]">local_fire_department</span>
+        <span>4 amigos horneando con amor todos los días • Envíos artesanales frescos a tu puerta</span>
+      </p>
+    </div>
+
+    <div
+      class="w-full bg-[#FBF9F5]/90 border-b border-[#DCE3D9]/60 shadow-[0_1px_8px_rgba(27,45,72,0.05)]">
+      <div
+        class="h-20 max-w-[1200px] mx-auto px-margin-mobile md:px-margin flex items-center justify-between gap-space-md">
+        <div class="flex items-center gap-space-md">
+          <img alt="Logo Quatro Pastelería" class="h-9 w-9 object-contain rounded-lg shadow-xs" src="logo.png" />
+          <a class="font-headline-sm text-headline-sm text-primary tracking-tight transition-opacity hover:opacity-80"
+            href="index.html">Quatro</a>
+        </div>
+
+        <nav id="desktopNav"
+          class="relative hidden lg:flex items-center gap-space-xs p-1.5 bg-[#EDF2EB] rounded-full border border-[#DCE3D9]">
+          <!-- The Elastic Pill Indicator -->
+          <div id="navElasticPill" style="opacity: 0;"></div>
+
+          <a data-nav-item="inicio"
+            class="relative z-10 px-space-md py-space-xs font-label-lg text-label-lg text-on-surface-variant transition-colors rounded-full"
+            href="index.html">Inicio</a>
+
+          <!-- Productos Dropdown -->
+          <div data-nav-item="productos" class="relative z-10 group" id="desktopProductsDropdown">
+            <button type="button" aria-expanded="true"
+              class="px-space-md py-space-xs font-label-lg text-label-lg transition-colors text-white font-bold rounded-full inline-flex items-center gap-1 cursor-pointer whitespace-nowrap">
+              <span>Productos</span>
+              <span
+                class="material-symbols-outlined text-[18px] w-[18px] h-[18px] inline-block overflow-hidden align-middle select-none transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+            </button>
+            <!-- Dropdown Menu -->
+            <div class="absolute left-0 top-full pt-2 w-64 hidden group-hover:block transition-all duration-200 z-50">
+              <div
+                class="dropdown-glass rounded-2xl p-2 flex flex-col gap-1">
+                <a aria-current="page"
+                  class="flex items-center gap-3 p-2.5 rounded-xl bg-[#EDF2EB]/90 text-primary font-bold transition-colors"
+                  href="brownies.html">
+                  <div class="w-8 h-8 rounded-lg bg-[#D8BA96]/40 flex items-center justify-center text-[#8B6543]">
+                    <span class="material-symbols-outlined text-[18px]">bakery_dining</span>
+                  </div>
+                  <div>
+                    <span class="font-title-md text-title-md block leading-snug">Brownies</span>
+                    <span class="text-xs text-on-surface-variant block font-normal">Cacao 70% &amp; corazón fudge</span>
+                  </div>
+                </a>
+                <a class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-[#EDF2EB]/80 text-primary transition-colors"
+                  href="pastafrolas.html">
+                  <div class="w-8 h-8 rounded-lg bg-[#EDF2EB] flex items-center justify-center text-[#4A6349]">
+                    <span class="material-symbols-outlined text-[18px]">pie</span>
+                  </div>
+                  <div>
+                    <span class="font-title-md text-title-md block leading-snug">Pastafrolas</span>
+                    <span class="text-xs text-on-surface-variant block">Masa sablée &amp; enrejado</span>
+                  </div>
+                </a>
+                <a class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-[#EDF2EB]/80 text-primary transition-colors"
+                  href="alfajores.html">
+                  <div class="w-8 h-8 rounded-lg bg-[#F5EDE1] flex items-center justify-center text-[#8B6543]">
+                    <span class="material-symbols-outlined text-[18px]">cookie</span>
+                  </div>
+                  <div>
+                    <span class="font-title-md text-title-md block leading-snug">Alfajores</span>
+                    <span class="text-xs text-on-surface-variant block">Extra dulce de leche repostero</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a data-nav-item="historia"
+            class="relative z-10 px-space-md py-space-xs font-label-lg text-label-lg text-on-surface-variant transition-colors rounded-full"
+            href="index.html#nuestra-historia">Nuestra Historia</a>
+        </nav>
+
+        <div class="flex items-center gap-space-md">
+          <a class="inline-flex items-center gap-space-xs bg-primary text-on-primary px-space-md py-space-sm rounded-full font-label-lg text-label-lg shadow-[0_2px_12px_rgba(27,45,72,0.18)] hover:bg-[#0B1D33] transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0"
+            href="https://wa.me/3434685501?text=Hola%20Quatro!%20Quiero%20hacer%20un%20pedido%20de%20brownies"
+            rel="noopener noreferrer" target="_blank">
+            <span class="material-symbols-outlined text-[18px]">chat</span>
+            <span class="hidden sm:inline">Pedir por WhatsApp</span>
+            <span class="sm:hidden">WhatsApp</span>
+          </a>
+
+          <button id="mobileMenuBtn" aria-label="Abrir menú"
+            class="lg:hidden w-9 h-9 rounded-full bg-[#EDF2EB] border border-[#DCE3D9] flex items-center justify-center text-primary hover:bg-[#DCE3D9] transition-colors">
+            <span class="material-symbols-outlined text-[20px]" id="mobileMenuIcon">menu</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobileMenu"
+        class="hidden lg:hidden bg-surface border-t border-[#DCE3D9] px-margin-mobile py-space-md shadow-lg">
+        <nav class="flex flex-col gap-space-xs">
+          <a class="px-space-md py-space-sm text-primary hover:bg-[#EDF2EB] rounded-xl font-medium"
+            href="index.html">Inicio</a>
+
+          <!-- Mobile Productos Accordion/Dropdown -->
+          <div class="flex flex-col">
+            <button id="mobileProductsToggle" type="button"
+              class="px-space-md py-space-sm bg-primary text-on-primary rounded-xl font-bold flex items-center justify-between w-full text-left">
+              <span>Productos</span>
+              <span class="material-symbols-outlined text-[20px] transition-transform duration-200"
+                id="mobileProductsArrow">expand_more</span>
+            </button>
+            <div id="mobileProductsSubmenu" class="flex flex-col pl-4 py-1 gap-1 border-l-2 border-[#DCE3D9] ml-4 my-1">
+              <a class="px-space-md py-space-xs bg-[#EDF2EB] text-primary font-bold rounded-lg text-sm flex items-center gap-2"
+                href="brownies.html">
+                <span class="material-symbols-outlined text-[16px] text-[#8B6543]">bakery_dining</span>
+                <span>Brownies</span>
+              </a>
+              <a class="px-space-md py-space-xs text-primary/80 hover:text-primary hover:bg-[#EDF2EB] rounded-lg text-sm flex items-center gap-2"
+                href="pastafrolas.html">
+                <span class="material-symbols-outlined text-[16px] text-[#4A6349]">pie</span>
+                <span>Pastafrolas</span>
+              </a>
+              <a class="px-space-md py-space-xs text-primary/80 hover:text-primary hover:bg-[#EDF2EB] rounded-lg text-sm flex items-center gap-2"
+                href="alfajores.html">
+                <span class="material-symbols-outlined text-[16px] text-[#8B6543]">cookie</span>
+                <span>Alfajores</span>
+              </a>
+            </div>
+          </div>
+
+          <a class="px-space-md py-space-sm text-primary hover:bg-[#EDF2EB] rounded-xl font-medium"
+            href="index.html#nuestra-historia">Nuestra Historia</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full pt-28 bg-[#FBF9F5]">
+    <div class="flex flex-col w-full relative">
+
+      <!-- Bakery Loader Transition -->
+      <div
+        class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#EDF2EB] transition-opacity duration-700 pointer-events-none opacity-0"
+        id="bakeryLoader">
+        <div class="relative flex flex-col items-center">
+          <div class="relative w-24 h-24 flex items-center justify-center">
+            <div class="absolute inset-0 rounded-full border-4 border-[#B7C4B2]/40 border-t-[#4A6349] animate-spin">
+            </div>
+            <span class="material-symbols-outlined text-[44px] text-[#8B6543] animate-pulse"
+              style="font-variation-settings: 'FILL' 1;">cookie</span>
+          </div>
+          <p class="font-headline-sm text-headline-sm text-primary mt-space-md tracking-wide">Horneando la magia...</p>
+          <p class="font-label-sm text-label-sm text-[#4A6349] tracking-widest uppercase mt-space-xs">Cacao 70% • Masa
+            Dorada • 100% Artesanal</p>
+        </div>
+      </div>
+
+      <!-- Main Canvas Container -->
+      <div
+        class="relative z-10 w-full max-w-[1200px] mx-auto px-margin-mobile md:px-margin space-y-space-xl pb-space-xl">
+
+        <!-- Hero Section: Chocolate Artesanal Experience -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center pt-space-lg">
+          <!-- Left Column -->
+          <div class="lg:col-span-5 space-y-space-md">
+            <div
+              class="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-[#DCE3D9] text-[#4A6349] rounded-full border border-[#B7C4B2]/50 shadow-sm">
+              <span class="material-symbols-outlined text-[16px] text-[#8B6543]">local_fire_department</span>
+              <span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Recién Salidos del
+                Horno</span>
+            </div>
+
+            <div class="space-y-space-xs">
+              <p class="font-label-lg text-label-lg text-[#8B6543] uppercase tracking-widest font-semibold">Nuestra
+                Especialidad Insignia</p>
+              <h1 class="font-display-lg text-display-lg text-primary tracking-tight">Brownies de Chocolate Puro</h1>
+            </div>
+
+            <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+              Craquelado brillante de superficie fina, corazón fudge denso y húmedo, enriquecido con trozos de nueces
+              tostadas a mano y escamas de sal marina patagónica. Cada porción horneada por nosotros cuatro con pasión y
+              oficio.
+            </p>
+
+            <!-- Signature Badges Bento Grid -->
+            <div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+              <div
+                class="p-space-sm bg-[#EDF2EB] border border-[#DCE3D9] rounded-xl shadow-sm flex items-start gap-space-xs">
+                <span class="material-symbols-outlined text-[#4A6349] text-[22px] mt-0.5">verified</span>
+                <div>
+                  <p class="font-title-md text-title-md text-primary">Cacao 70%</p>
+                  <p class="font-body-sm text-body-sm text-[#434841]">Chocolate amargo noble</p>
+                </div>
+              </div>
+              <div
+                class="p-space-sm bg-[#F5EEE4] border border-[#D8BA96]/60 rounded-xl shadow-sm flex items-start gap-space-xs">
+                <span class="material-symbols-outlined text-[#8B6543] text-[22px] mt-0.5">water_drop</span>
+                <div>
+                  <p class="font-title-md text-title-md text-primary">Fudge Húmedo</p>
+                  <p class="font-body-sm text-body-sm text-[#434841]">Textura densa y fundente</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- WhatsApp CTA Actions -->
+            <div class="pt-space-sm flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm">
+              <a class="inline-flex items-center justify-center gap-space-xs bg-primary text-on-primary px-space-lg py-space-md rounded-full font-label-lg text-label-lg shadow-md hover:bg-[#0B1D33] transition-all duration-200 transform hover:-translate-y-0.5"
+                href="https://wa.me/3434685501?text=Hola%20Quatro!%20Quiero%20hacer%20un%20pedido%20de%20sus%20Brownies%20artesanales%20con%20cacao%2070%25%20%F0%9F%A7%81"
+                rel="noopener noreferrer" target="_blank">
+                <span class="material-symbols-outlined text-[20px]">chat</span>
+                <span>Pedir por WhatsApp</span>
+              </a>
+              <a class="inline-flex items-center justify-center gap-space-xs bg-[#EDF2EB] text-[#4A6349] border border-[#B7C4B2] px-space-md py-space-md rounded-full font-label-lg text-label-lg hover:bg-[#DCE3D9] transition-colors"
+                href="#cajas">
+                <span>Ver Cajas de Regalo</span>
+                <span class="material-symbols-outlined text-[18px]">south</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Editorial Hero Image Layer -->
+          <div class="lg:col-span-7 relative">
+            <div
+              class="relative rounded-3xl overflow-hidden shadow-xl bg-surface-container-lowest border border-[#DCE3D9]">
+              <img
+                alt="Primer plano de brownies artesanales Quatro con craquelado brillante, nueces crocantes y sal marina de la Patagonia sobre plato menta pastel"
+                class="w-full h-[460px] md:h-[540px] object-cover transition-transform duration-500 hover:scale-105"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuATyy0UPJr9uktSslcXFaILcM5N42t_dw4RuW5xcbEHCIkAkwtMHMqyMOTZyK8gjVBKZXTggh20jwaJYyipfS0ObxtimiG-7FgqyF7Ql3Kuy-NkgYWvNAZRRYEzCoQbKc9t8pXk58e3XzXJllOmuVLMXI-2fCiyxIBS0EEX0ZRMggkMrpLQsrM04SxCGSvm1EcMgAsNlDQQAKQt4GLY5s4TLy-syg9nidsVH-ZpJIkaoF6ugrlonjE" />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent pointer-events-none">
+              </div>
+
+              <!-- Floating Pill Note on Image -->
+              <div
+                class="absolute bottom-space-md left-space-md right-space-md sm:right-auto bg-[#FBF9F5]/95 backdrop-blur-md p-space-md rounded-2xl shadow-lg border border-[#D8BA96]/50 flex items-center gap-space-md">
+                <div
+                  class="w-12 h-12 rounded-full bg-[#F5EEE4] border border-[#D8BA96] flex items-center justify-center text-[#8B6543] shrink-0">
+                  <span class="material-symbols-outlined text-[24px]">grain</span>
+                </div>
+                <div>
+                  <p class="font-title-md text-title-md text-primary">Toque de Sal Patagónica</p>
+                  <p class="font-body-sm text-body-sm text-[#735a39]">Realza la profundidad del chocolate amargo puro
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Artisanal Ingredients Bar: Formula Sagrada -->
+        <section class="bg-[#EDF2EB] border border-[#DCE3D9] rounded-3xl p-space-lg md:p-space-xl shadow-sm">
+          <div class="text-center max-w-xl mx-auto mb-space-lg space-y-space-xs">
+            <p class="font-label-sm text-label-sm text-[#4A6349] uppercase tracking-widest font-bold">Honestidad y
+              Materia Prima</p>
+            <h2 class="font-headline-md text-headline-md text-primary">Nuestra Fórmula Sagrada</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant">Sin conservantes artificiales ni premezclas.
+              Cada lote se elabora con ingredientes nobles pesados a mano.</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+            <!-- Ingrediente 1 -->
+            <div
+              class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm space-y-space-xs text-center flex flex-col items-center border border-[#DCE3D9]/60 hover:border-[#8A9E8A] transition-colors">
+              <div class="w-14 h-14 rounded-full bg-[#EDF2EB] flex items-center justify-center text-[#4A6349]">
+                <span class="material-symbols-outlined text-[28px]"
+                  style="font-variation-settings: 'FILL' 1;">spa</span>
+              </div>
+              <h3 class="font-title-md text-title-md text-primary">Cacao 70% Puro</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Blend de chocolate oscuro seleccionado con
+                notas aromáticas tostadas e intensas.</p>
+            </div>
+
+            <!-- Ingrediente 2 -->
+            <div
+              class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm space-y-space-xs text-center flex flex-col items-center border border-[#D8BA96]/40 hover:border-[#D8BA96] transition-colors">
+              <div class="w-14 h-14 rounded-full bg-[#F5EEE4] flex items-center justify-center text-[#8B6543]">
+                <span class="material-symbols-outlined text-[28px]">breakfast_dining</span>
+              </div>
+              <h3 class="font-title-md text-title-md text-primary">Manteca de Primera</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">100% crema de leche fresca pasteurizada,
+                garantizando suavidad y brillo fundente.</p>
+            </div>
+
+            <!-- Ingrediente 3 -->
+            <div
+              class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm space-y-space-xs text-center flex flex-col items-center border border-[#D8BA96]/40 hover:border-[#D8BA96] transition-colors">
+              <div class="w-14 h-14 rounded-full bg-[#F5EEE4] flex items-center justify-center text-[#8B6543]">
+                <span class="material-symbols-outlined text-[28px]">egg</span>
+              </div>
+              <h3 class="font-title-md text-title-md text-primary">Huevos de Campo</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Huevos pastoriles frescos para una emulsión
+                densa que crea el craquelado superior.</p>
+            </div>
+
+            <!-- Ingrediente 4 -->
+            <div
+              class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm space-y-space-xs text-center flex flex-col items-center border border-[#DCE3D9]/60 hover:border-[#8A9E8A] transition-colors">
+              <div class="w-14 h-14 rounded-full bg-[#EDF2EB] flex items-center justify-center text-[#4A6349]">
+                <span class="material-symbols-outlined text-[28px]">eco</span>
+              </div>
+              <h3 class="font-title-md text-title-md text-primary">Cero Conservantes</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Pastelería viva y honesta pensada para
+                consumirse fresca del horno a tu mesa.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Presentation Boxes Section -->
+        <section class="space-y-space-lg" id="cajas">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+            <div>
+              <p class="font-label-sm text-label-sm text-[#4A6349] uppercase tracking-widest font-bold">Opciones de
+                Horneado</p>
+              <h2 class="font-headline-lg text-headline-lg text-primary">Elegí tu Caja Favorita</h2>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+              Cajas listas para regalar o compartir. Todos los pedidos viajan protegidos en papel manteca ecológico y
+              caja rígida sellada.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+
+            <!-- Box 1: Cuarteto Clásico -->
+            <div
+              class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group border border-[#DCE3D9]">
+              <div class="space-y-space-md">
+                <div class="relative h-56 rounded-xl overflow-hidden bg-[#EDF2EB]">
+                  <img alt="Caja Cuarteto Clásico de 4 brownies artesanales con nueces"
+                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuABjraJYU2wIZT0dLpqG0lhpxDNhj8LRkEK52MeIkW1QQyhVv5DKAczJeYFSHBoLu1L-nfdmvDYKjh1_R8iUydolBIDhzHVeLVbCxicY5eJ5Ckw4lQnSfc20C4ZEZMoyY7-0MBXMOLrYJyu4P_qPeJZxQaJvy9tKJUgxciVw0pez86oyWAYRM5bit5r3FIDRidFI-eXoTgRbWINyINAyOkj9RobEXijscVkD34GEhR6SEJ0ruPvAyI" />
+                  <div
+                    class="absolute top-space-sm left-space-sm bg-[#EDF2EB] text-[#4A6349] border border-[#B7C4B2] px-space-sm py-space-xs rounded-full font-label-sm text-label-sm shadow-sm font-semibold">
+                    4 Unidades XL
+                  </div>
+                </div>
+
+                <div class="space-y-space-xs">
+                  <h3 class="font-title-lg text-title-lg text-primary">Caja Cuarteto Clásico</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant">
+                    Cuatro brownies generosos de chocolate semi-amargo puro cargados de nueces mariposa y terminación de
+                    sal marina patagónica.
+                  </p>
+                </div>
+
+                <ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant pt-space-xs">
+                  <li class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-[#4A6349] text-[18px]">check_circle</span>
+                    <span>Porciones de 110g aprox cada una</span>
+                  </li>
+                  <li class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-[#4A6349] text-[18px]">check_circle</span>
+                    <span>Nueces tostadas en el día</span>
+                  </li>
+                  <li class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-[#4A6349] text-[18px]">check_circle</span>
+                    <span>Ideal merienda para dos o tres</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="pt-space-lg space-y-space-md">
+                <div class="flex items-baseline justify-between border-t border-[#DCE3D9] pt-space-sm">
+                  <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Precio
+                    artesanal</span>
+                  <span class="font-headline-md text-headline-md text-primary">$ 6.800</span>
+                </div>
+                <a class="w-full inline-flex items-center justify-center gap-space-xs bg-primary text-on-primary py-space-md rounded-xl font-label-lg text-label-lg shadow-sm hover:bg-[#0B1D33] transition-colors"
+                  href="https://wa.me/3434685501?text=Hola%20chicos%20de%20Quatro!%20Quiero%20pedir%20la%20*Caja%20Cuarteto%20Cl%C3%A1sico*%20(4%20brownies)%20para%20retirar/env%C3%ADo.%20%F0%9F%A7%81"
+                  rel="noopener noreferrer" target="_blank">
+                  <span class="material-symbols-outlined text-[18px]">chat</span>
+                  <span>Pedir por WhatsApp</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Box 2: Indulgencia -->
+            <div
+              class="bg-[#F5EEE4] border-2 border-[#D8BA96] rounded-2xl p-space-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative group transform md:-translate-y-2">
+              <div class="space-y-space-md">
+                <div class="relative h-56 rounded-xl overflow-hidden bg-[#EDF2EB]">
+                  <img alt="Caja Indulgencia de ocho brownies artesanales mixtos con dulce de leche"
+                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMusK6BFGSKbgEe_TSkS_77oppn7i6kIUncCIxcU62FQLJaVhq0FzdDNT_4GFxBg5x0KpcFYto1ClTIHZNfPwfM89_P2c6CQuNYYbA5c4WeOV40yUWM42hIhkNBeNvgZ005CIRz52nL1gAjcr-yUbC7WT-OElDJZu0AVNZC76fJhemOMMiAPy7vmOp4FVqLGItTCx31x10-umagMPn7hWRQ40eukBVdfDYxlFWXrxuL-MvCLzK7i8" />
+                  <div
+                    class="absolute top-space-sm left-space-sm bg-[#D8BA96] text-[#291801] font-label-sm text-label-sm px-space-sm py-space-xs rounded-full shadow-sm font-bold">
+                    Más Elegida • 8 Unidades
+                  </div>
+                </div>
+
+                <div class="space-y-space-xs">
+                  <div class="flex items-center justify-between">
+                    <h3 class="font-title-lg text-title-lg text-primary">Caja Indulgencia</h3>
+                    <span class="material-symbols-outlined text-[#8B6543]"
+                      style="font-variation-settings: 'FILL' 1;">star</span>
+                  </div>
+                  <p class="font-body-md text-body-md text-on-surface-variant">
+                    Ocho brownies mixtos: 4 clásicos con nueces y 4 con hilos generosos de dulce de leche repostero
+                    premium y lluvia de sal marina.
+                  </p>
+                </div>
+
+                <ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant pt-space-xs">
+                  <li class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-[#8B6543] text-[18px]">check_circle</span>
+                    <span>Variedad dulce de leche + clásico nuez</span>
+                  </li>
+                  <li class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-[#8B6543] text-[18px]">check_circle</span>
+                    <span>Caja de regalo con cinta artesanal</span>
+                  </li>
+                  <li class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-[#4A6349] text-[18px]">check_circle</span>
+                    <span class="font-medium text-[#4A6349]">Elaboración 100% casera en lote pequeño</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="pt-space-lg space-y-space-md">
+                <div class="flex items-baseline justify-between border-t border-[#D8BA96]/60 pt-space-sm">
+                  <span class="font-label-sm text-label-sm text-[#735a39] uppercase tracking-wider font-semibold">Precio
+                    artesanal</span>
+                  <span class="font-headline-md text-headline-md text-primary">$ 12.500</span>
+                </div>
+                <a class="w-full inline-flex items-center justify-center gap-space-xs bg-primary text-on-primary py-space-md rounded-xl font-label-lg text-label-lg shadow-sm hover:bg-[#0B1D33] transition-colors"
+                  href="https://wa.me/3434685501?text=Hola%20Quatro!%20Me%20encantar%C3%ADa%20pedir%20la%20*Caja%20Indulgencia*%20(8%20brownies%20mixtos%20con%20dulce%20de%20leche)."
+                  rel="noopener noreferrer" target="_blank">
+                  <span class="material-symbols-outlined text-[18px]">chat</span>
+                  <span>Pedir por WhatsApp</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Box 3: Mini Bocaditos -->
+            <div
+              class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group border border-[#DCE3D9]">
+              <div class="space-y-space-md">
+                <div class="relative h-56 rounded-xl overflow-hidden bg-[#EDF2EB]">
+                  <img alt="Bocaditos de brownie para eventos"
+                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGHgSDJcO-LIpWRhctEgn4ZIRV0hKhGK18QpTYlYvbqw09gElAr6r6LzGj4j1O5jPfvKNiKq7yYJYhf3lYW9bFSdQWavFDzQzrsUdUmNX52wUz8xCHiBscwFBaE-SRUUSruDrojI7Cz4RrdT8gwvNDe2FTLXKvZmK8TwOTt9QJhdkZWHektScCIyxnq9xpqB27VVu3xw9QuCnxjDFKFq9UEqu_W2510NOcXn7QKm6wtX8wnOJwygI" />
+                  <div
+                    class="absolute top-space-sm left-space-sm bg-[#EDF2EB] text-[#4A6349] border border-[#B7C4B2] px-space-sm py-space-xs rounded-full font-label-sm text-label-sm shadow-sm font-semibold">
+                    16 Mini Cuadraditos
+                  </div>
+                </div>
+
+                <div class="space-y-space-xs">
+                  <h3 class="font-title-lg text-title-lg text-primary">Mini Bocaditos</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant">
+                    Dieciséis bocaditos tipo finger food. Ideales para reuniones, mesas dulces de cumpleaños o para
+                    picar durante el trabajo.
+                  </p>
+                </div>
+
+                <ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant pt-space-xs">
+                  <li class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-[#4A6349] text-[18px]">check_circle</span>
+                    <span>Fácil de servir en eventos</span>
+                  </li>
+                  <li class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-[#4A6349] text-[18px]">check_circle</span>
+                    <span>Bocaditos densos con doble cacao</span>
+                  </li>
+                  <li class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-[#4A6349] text-[18px]">check_circle</span>
+                    <span>Incluye toppers de Quatro</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="pt-space-lg space-y-space-md">
+                <div class="flex items-baseline justify-between border-t border-[#DCE3D9] pt-space-sm">
+                  <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Precio
+                    artesanal</span>
+                  <span class="font-headline-md text-headline-md text-primary">$ 11.200</span>
+                </div>
+                <a class="w-full inline-flex items-center justify-center gap-space-xs bg-primary text-on-primary py-space-md rounded-xl font-label-lg text-label-lg shadow-sm hover:bg-[#0B1D33] transition-colors"
+                  href="https://wa.me/3434685501?text=Hola%20amigos%20de%20Quatro!%20Quiero%20la%20caja%20de%20*Mini%20Bocaditos%20para%20Compartir*%20(16%20unidades)%20para%20mi%20reuni%C3%B3n.%20%F0%9F%8D%B0"
+                  rel="noopener noreferrer" target="_blank">
+                  <span class="material-symbols-outlined text-[18px]">chat</span>
+                  <span>Pedir por WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Entrepreneurship & Workshop Quality Impact Card -->
+        <section
+          class="bg-[#EDF2EB] text-on-surface rounded-3xl p-space-lg md:p-space-xl shadow-sm border border-[#DCE3D9] relative overflow-hidden">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-center relative z-10">
+            <div class="md:col-span-8 space-y-space-xs">
+              <div
+                class="inline-flex items-center gap-space-xs px-space-sm py-space-xs bg-white text-primary rounded-full font-label-sm text-label-sm shadow-xs border border-[#DCE3D9]">
+                <span class="material-symbols-outlined text-[16px] text-[#4A6349]">local_fire_department</span>
+                <span class="font-medium">Horneado Diario: 4 Amigos Pasteleros</span>
+              </div>
+              <h3 class="font-headline-md text-headline-md text-primary">¡Elaboración artesanal en lotes reducidos!</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+                Cuidamos cada minuto de cocción para lograr ese craquelado superior perfecto. Sin stock estacionado:
+                cada pedido se hornea a demanda para garantizar frescura absoluta.
+              </p>
+
+              <div class="pt-space-md space-y-space-xs">
+                <div class="flex justify-between font-label-sm text-label-sm font-semibold text-[#434841]">
+                  <span>Hornadas reservadas esta semana</span>
+                  <span class="text-[#4A6349] font-bold">85% Capacidad</span>
+                  <span>100% Fresco del día</span>
+                </div>
+                <div class="w-full h-3 bg-[#DCE3D9] rounded-full overflow-hidden">
+                  <div class="h-full bg-[#8A9E8A] rounded-full transition-all duration-1000" style="width: 85%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="md:col-span-4 flex flex-col items-center md:items-end justify-center">
+              <div
+                class="bg-surface-container-lowest border border-[#D8BA96] p-space-md rounded-2xl shadow-md text-center max-w-[220px]">
+                <span class="material-symbols-outlined text-[#8B6543] text-[32px]">bakery_dining</span>
+                <p class="font-headline-sm text-headline-sm text-primary">1.840</p>
+                <p class="font-body-sm text-body-sm text-[#735a39]">Brownies horneados con cariño</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Pairing Recommendations -->
+        <section class="space-y-space-md">
+          <div class="text-center max-w-lg mx-auto space-y-space-xs">
+            <p class="font-label-sm text-label-sm text-[#4A6349] uppercase tracking-widest font-bold">Experiencia
+              Sensorial</p>
+            <h2 class="font-headline-md text-headline-md text-primary">Maridaje Recomendado</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant">El fudge intenso encuentra su equilibrio ideal
+              con estas bebidas:</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            <!-- Pairing 1 -->
+            <div
+              class="bg-[#F5EEE4] border border-[#D8BA96]/60 p-space-lg rounded-2xl shadow-sm flex flex-col justify-between space-y-space-md">
+              <div class="space-y-space-sm">
+                <div class="w-12 h-12 rounded-full bg-[#D8BA96] text-[#291801] flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[24px]">coffee</span>
+                </div>
+                <h3 class="font-title-lg text-title-lg text-primary">Café de Especialidad</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Un Flat White o Espresso con notas frutales y acidez brillante corta la densidad del chocolate y
+                  resalta el tostado de las nueces.
+                </p>
+              </div>
+              <div
+                class="p-space-xs bg-white rounded-xl font-label-sm text-label-sm text-[#735a39] text-center border border-[#D8BA96]/40 font-medium">
+                Temperatura sugerida: Caliente (65°C)
+              </div>
+            </div>
+
+            <!-- Pairing 2 -->
+            <div
+              class="bg-[#EDF2EB] border border-[#DCE3D9] p-space-lg rounded-2xl shadow-sm flex flex-col justify-between space-y-space-md">
+              <div class="space-y-space-sm">
+                <div class="w-12 h-12 rounded-full bg-[#DCE3D9] text-[#4A6349] flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[24px]">local_cafe</span>
+                </div>
+                <h3 class="font-title-lg text-title-lg text-primary">Mate Amargo Criollo</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  La yerba suave de monte contrasta con las chispas de sal marina y la manteca del brownie, limpiando el
+                  paladar bocado a bocado.
+                </p>
+              </div>
+              <div
+                class="p-space-xs bg-white rounded-xl font-label-sm text-label-sm text-[#4A6349] text-center border border-[#DCE3D9] font-medium">
+                El clásico inseparable de las tardes
+              </div>
+            </div>
+
+            <!-- Pairing 3 -->
+            <div
+              class="bg-[#F5EEE4] border border-[#D8BA96]/60 p-space-lg rounded-2xl shadow-sm flex flex-col justify-between space-y-space-md">
+              <div class="space-y-space-sm">
+                <div class="w-12 h-12 rounded-full bg-[#D8BA96] text-[#291801] flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[24px]">water_full</span>
+                </div>
+                <h3 class="font-title-lg text-title-lg text-primary">Leche Fría o Almendras</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  La combinación nostálgica por excelencia. Calentá tu brownie 12 segundos al microondas y servilo junto
+                  a un vaso bien helado.
+                </p>
+              </div>
+              <div
+                class="p-space-xs bg-white rounded-xl font-label-sm text-label-sm text-[#735a39] text-center border border-[#D8BA96]/40 font-medium">
+                Tip: 12 seg de calor activan el corazón fudge
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section
+          class="bg-surface-container-lowest border border-[#DCE3D9] rounded-3xl p-space-lg md:p-space-xl shadow-sm space-y-space-lg">
+          <div class="text-center max-w-xl mx-auto space-y-space-xs">
+            <p class="font-label-sm text-label-sm text-[#4A6349] uppercase tracking-widest font-bold">Comunidad &amp;
+              Clientes</p>
+            <h2 class="font-headline-md text-headline-md text-primary">Quienes ya meriendan con Quatro</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            <div
+              class="bg-[#EDF2EB] border border-[#DCE3D9] p-space-md rounded-2xl shadow-sm space-y-space-sm flex flex-col justify-between">
+              <div class="space-y-space-xs">
+                <div class="flex text-[#8B6543]">
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface italic">
+                  "El nivel de chocolate es de otro planeta. Húmedo en el centro como debe ser y el toque de sal marina
+                  le da un toque gourmet supremo. ¡Un éxito total este emprendimiento, sigan así chicos!"
+                </p>
+              </div>
+              <div class="pt-space-xs border-t border-[#DCE3D9]">
+                <p class="font-title-md text-title-md text-primary">Lucía Méndez</p>
+                <p class="font-body-sm text-body-sm text-[#735a39]">Pidió Caja Indulgencia</p>
+              </div>
+            </div>
+
+            <div
+              class="bg-[#F5EEE4] border border-[#D8BA96]/60 p-space-md rounded-2xl shadow-sm space-y-space-sm flex flex-col justify-between">
+              <div class="space-y-space-xs">
+                <div class="flex text-[#8B6543]">
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface italic">
+                  "Llevé la caja de 16 bocaditos a la oficina un viernes y volaron en 5 minutos. Se nota que usan
+                  manteca pura y no escatiman en nueces."
+                </p>
+              </div>
+              <div class="pt-space-xs border-t border-[#D8BA96]/60">
+                <p class="font-title-md text-title-md text-primary">Ignacio Valenzuela</p>
+                <p class="font-body-sm text-body-sm text-[#735a39]">Cliente recurrente</p>
+              </div>
+            </div>
+
+            <div
+              class="bg-[#EDF2EB] border border-[#DCE3D9] p-space-md rounded-2xl shadow-sm space-y-space-sm flex flex-col justify-between">
+              <div class="space-y-space-xs">
+                <div class="flex text-[#8B6543]">
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface italic">
+                  "La atención por WhatsApp es súper cálida y te avisan justo cuando sale la hornada de la tarde. Un
+                  diez en calidad humana y sabor."
+                </p>
+              </div>
+              <div class="pt-space-xs border-t border-[#DCE3D9]">
+                <p class="font-title-md text-title-md text-primary">Camila &amp; Tomás</p>
+                <p class="font-body-sm text-body-sm text-[#735a39]">Vecinos de Palermo</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section
+          class="bg-primary text-on-primary rounded-3xl p-space-lg md:p-space-xl shadow-xl text-center space-y-space-md border border-[#DCE3D9]/20">
+          <div class="max-w-2xl mx-auto space-y-space-xs">
+            <h2 class="font-headline-lg text-headline-lg text-on-primary">¿Listo para merendar algo inolvidable?</h2>
+            <p class="font-body-lg text-body-lg text-[#DCE3D9]">
+              Escribinos ahora para asegurar tu porción de la próxima hornada fresca. Coordinamos punto de entrega o
+              envío a domicilio.
+            </p>
+          </div>
+          <div class="pt-space-sm">
+            <a class="inline-flex items-center gap-space-xs bg-[#D8BA96] text-[#291801] px-space-xl py-space-md rounded-full font-title-md text-title-md shadow-lg hover:bg-[#C8A882] transition-all duration-200 transform hover:scale-105 font-bold"
+              href="https://wa.me/3434685501?text=Hola%20chicos%20de%20Quatro!%20Quiero%20hacer%20un%20pedido%20de%20brownies%20para%20hoy/ma%C3%B1ana%20%F0%9F%A7%81%E2%98%80%EF%B8%8F"
+              rel="noopener noreferrer" target="_blank">
+              <span class="material-symbols-outlined text-[22px]">chat</span>
+              <span>Pedir por WhatsApp ahora</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full bg-[#EDF2EB] text-on-surface mt-space-xl border-t border-[#DCE3D9]">
+    <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin py-space-xl">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-space-xl">
+        <div class="md:col-span-1 space-y-space-sm">
+          <div class="flex items-center gap-space-sm">
+            <img alt="Logo Quatro Pastelería" class="h-9 w-9 object-contain rounded-lg shadow-xs" src="logo.png" />
+            <span class="font-headline-sm text-headline-sm text-primary">Quatro</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            El emprendimiento de cuatro amigos reposteros horneando delicias artesanales con ingredientes de primera y
+            dedicación absoluta. Cada hornada sale fresca de nuestra cocina a tu mesa.
+          </p>
+        </div>
+
+        <div class="space-y-space-sm">
+          <h4 class="font-title-md text-title-md text-primary">Horarios de Horneado</h4>
+          <ul class="font-body-sm text-body-sm text-on-surface-variant space-y-space-xs">
+            <li>Lunes a Viernes: 08:00 - 19:30</li>
+            <li>Sábados: 09:00 - 15:00</li>
+            <li>Domingos: Horneado especial &amp; entregas</li>
+            <li class="font-label-sm text-[#4A6349] font-bold pt-space-xs">Hornadas frescas cada mañana</li>
+          </ul>
+        </div>
+
+        <div class="space-y-space-sm">
+          <h4 class="font-title-md text-title-md text-primary">Comunidad Quatro</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Seguí el día a día de nuestro emprendimiento, recetas compartidas y novedades de horneado.
+          </p>
+          <div class="flex items-center gap-space-sm pt-space-xs">
+            <a aria-label="Instagram"
+              class="w-9 h-9 rounded-full bg-white border border-[#DCE3D9] flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-on-primary transition-colors"
+              href="https://wa.me/3434685501?text=Hola%20Quatro!%20Los%20vi%20en%20redes" target="_blank"
+              rel="noopener noreferrer">
+              <span class="material-symbols-outlined text-[18px]">photo_camera</span>
+            </a>
+            <a aria-label="TikTok"
+              class="w-9 h-9 rounded-full bg-white border border-[#DCE3D9] flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-on-primary transition-colors"
+              href="https://wa.me/3434685501?text=Hola%20Quatro!%20Los%20vi%20en%20TikTok" target="_blank"
+              rel="noopener noreferrer">
+              <span class="material-symbols-outlined text-[18px]">play_circle</span>
+            </a>
+            <a aria-label="Ubicación y Retiros"
+              class="w-9 h-9 rounded-full bg-white border border-[#DCE3D9] flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-on-primary transition-colors"
+              href="https://wa.me/3434685501?text=Hola%20Quatro!%20Donde%20es%20el%20punto%20de%20retiro%3F"
+              target="_blank" rel="noopener noreferrer">
+              <span class="material-symbols-outlined text-[18px]">pin_drop</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="space-y-space-sm">
+          <h4 class="font-title-md text-title-md text-primary">Atención Directa</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            ¿Pedidos para eventos o consultas especiales? Escribinos directo a nuestra línea de WhatsApp.
+          </p>
+          <a class="inline-flex items-center gap-space-xs bg-[#4A6349] text-white px-space-md py-space-sm rounded-lg font-label-lg text-label-lg hover:bg-primary transition-colors duration-150 shadow-sm"
+            href="https://wa.me/3434685501" rel="noopener noreferrer" target="_blank">
+            <span class="material-symbols-outlined text-[18px]">send</span>
+            <span>Contactar: 3434685501</span>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm border-t border-[#DCE3D9]">
+        <p>© 2025 Quatro Pastelería Artesanal. Hecho con amor por 4 amigos.</p>
+        <p class="text-label-sm font-label-sm text-[#4A6349] font-bold">Pastelería 100% casera hecha a mano</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for Mobile Menu -->
+  <script>
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileIcon = document.getElementById('mobileMenuIcon');
+
+    mobileBtn?.addEventListener('click', () => {
+      if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('hidden');
+        mobileIcon.textContent = 'close';
+      } else {
+        mobileMenu.classList.add('hidden');
+        mobileIcon.textContent = 'menu';
+      }
+    });
+
+    // Mobile Products Accordion Toggle
+    const mobileProductsToggle = document.getElementById('mobileProductsToggle');
+    const mobileProductsSubmenu = document.getElementById('mobileProductsSubmenu');
+    const mobileProductsArrow = document.getElementById('mobileProductsArrow');
+
+    mobileProductsToggle?.addEventListener('click', () => {
+      if (mobileProductsSubmenu.classList.contains('hidden')) {
+        mobileProductsSubmenu.classList.remove('hidden');
+        mobileProductsArrow.style.transform = 'rotate(180deg)';
+      } else {
+        mobileProductsSubmenu.classList.add('hidden');
+        mobileProductsArrow.style.transform = 'rotate(0deg)';
+      }
+    });
+
+    // Smooth Page Fade Transition
+    document.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('page-loaded');
+    });
+
+    // Intercept local page links for smooth out-transition
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (!href || href.startsWith('#') || href.startsWith('javascript') || href.startsWith('https://wa.me') || link.target === '_blank') return;
+
+      link.addEventListener('click', (e) => {
+        if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+        const targetUrl = new URL(link.href, window.location.href);
+        if (targetUrl.origin === window.location.origin) {
+          e.preventDefault();
+          document.body.classList.remove('page-loaded');
+          document.body.classList.add('page-leaving');
+          setTimeout(() => {
+            window.location.href = href;
+          }, 220);
+        }
+      });
+    });
+
+    // Elastic Nav Indicator Logic
+    const desktopNav = document.getElementById('desktopNav');
+    const pill = document.getElementById('navElasticPill');
+    const navItems = desktopNav ? desktopNav.querySelectorAll('[data-nav-item]') : [];
+    let activeItem = desktopNav ? desktopNav.querySelector('[data-nav-item="productos"]') : null;
+    let currentHoveredItem = null;
+
+    function updatePillPosition(targetEl) {
+      if (!pill || !desktopNav || !targetEl) return;
+      
+      const btn = targetEl.tagName === 'A' ? targetEl : (targetEl.querySelector('button') || targetEl);
+      const navRect = desktopNav.getBoundingClientRect();
+      const targetRect = btn.getBoundingClientRect();
+
+      const newLeft = targetRect.left - navRect.left;
+      const newTop = targetRect.top - navRect.top;
+      const newWidth = targetRect.width;
+      const newHeight = targetRect.height;
+
+      pill.style.left = `${newLeft}px`;
+      pill.style.top = `${newTop}px`;
+      pill.style.width = `${newWidth}px`;
+      pill.style.height = `${newHeight}px`;
+      pill.style.opacity = '1';
+
+      navItems.forEach(item => {
+        const linkOrBtn = item.tagName === 'A' ? item : item.querySelector('button');
+        if (!linkOrBtn) return;
+        if (item === targetEl) {
+          linkOrBtn.classList.add('text-white', 'font-bold');
+          linkOrBtn.classList.remove('text-on-surface-variant', 'text-navy-ink/80');
+        } else {
+          linkOrBtn.classList.remove('text-white', 'font-bold');
+          linkOrBtn.classList.add('text-on-surface-variant');
+        }
+      });
+    }
+
+    function syncPill() {
+      const target = currentHoveredItem || activeItem;
+      if (target) updatePillPosition(target);
+    }
+
+    syncPill();
+    requestAnimationFrame(syncPill);
+    setTimeout(syncPill, 50);
+    setTimeout(syncPill, 150);
+    setTimeout(syncPill, 350);
+
+    if (document.fonts) {
+      document.fonts.ready.then(syncPill);
+    }
+    window.addEventListener('resize', syncPill);
+
+    navItems.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        currentHoveredItem = item;
+        updatePillPosition(item);
+      });
+    });
+
+    desktopNav?.addEventListener('mouseleave', () => {
+      currentHoveredItem = null;
+      if (activeItem) {
+        updatePillPosition(activeItem);
+      }
+    });
+  </script>
+</body>
+
+</html>
